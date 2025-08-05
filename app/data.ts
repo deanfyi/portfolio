@@ -49,27 +49,27 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
+    company: 'Odyssey Finance',
+    title: 'Creative Director',
+    start: '2023',
     end: 'Present',
-    link: 'https://ibelick.com',
+    link: 'https://odyssey.finance',
     id: 'work1',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
+    company: 'ui3',
+    title: 'Founder',
+    start: '2025',
+    end: 'Present',
+    link: 'https://ui3.xyz',
     id: 'work2',
   },
   {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'Tapmydata',
+    title: 'Digital Designer',
+    start: '2022',
+    end: '2023',
+    link: 'https://tapmydata.com',
     id: 'work3',
   },
 ]
@@ -106,20 +106,20 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
+    link: 'https://github.com/deanfyi',
   },
   {
     label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    link: 'https://twitter.com/deanfyi',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/deannicholascurran/',
   },
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.threads.com/deanfyi',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'dean.curran@icloud.com'
