@@ -1,0 +1,50 @@
+# Interactive Components Demo
+
+This craft page demonstrates how to use live, interactive components directly in your MDX files.
+
+## Spotlight Effect
+
+<Spotlight className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50" size={64}>
+  <div className="relative h-40 w-full rounded-xl bg-zinc-50 p-8 dark:bg-zinc-950">
+    <h3 className="text-lg font-semibold">Hover over me!</h3>
+    <p className="text-zinc-600 dark:text-zinc-400">This spotlight effect follows your cursor</p>
+  </div>
+</Spotlight>
+
+## Magnetic Button
+
+<Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
+  <button className="rounded-full bg-zinc-900 px-6 py-3 text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200">
+    Magnetic Button
+  </button>
+</Magnetic>
+
+## Animated Background
+
+<AnimatedBackground
+  enableHover
+  className="h-32 w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+  transition={{
+    type: 'spring',
+    bounce: 0,
+    duration: 0.2,
+  }}
+>
+  <div className="flex h-full items-center justify-center">
+    <p className="text-center">Hover for animated background effect</p>
+  </div>
+</AnimatedBackground>
+
+## How to Use
+
+Simply import your components in `mdx-components.tsx` and then use them directly in your MDX files like this:
+
+```jsx
+<Spotlight className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl" size={64}>
+  <div className="p-8">
+    Your content here
+  </div>
+</Spotlight>
+```
+
+The components will work exactly as they do in your React components, with full interactivity and animations!

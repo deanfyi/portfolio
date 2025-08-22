@@ -2,6 +2,92 @@
 
 Next.js supports exporting a `metadata` object from your MDX files, which can be used to enhance SEO and social sharing features. This is especially useful for blog posts and documentation pages.
 
+## Interactive Components in MDX
+
+You can now use live, interactive components directly in your craft pages! Here are some examples:
+
+### Spotlight Effect
+
+<Spotlight className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50" size={64}>
+  <div className="relative h-40 w-full rounded-xl bg-zinc-50 p-8 dark:bg-zinc-950">
+    <h3 className="text-lg font-semibold">Hover over me!</h3>
+    <p className="text-zinc-600 dark:text-zinc-400">This spotlight effect follows your cursor</p>
+  </div>
+</Spotlight>
+
+### Animated Text Effects
+
+<TextEffect 
+  words={[
+    {
+      text: "Interactive",
+      className: "text-blue-500 dark:text-blue-400",
+    },
+    {
+      text: "Components",
+      className: "text-purple-500 dark:text-purple-400",
+    },
+    {
+      text: "in MDX!",
+      className: "text-green-500 dark:text-green-400",
+    },
+  ]}
+  className="text-2xl font-bold"
+/>
+
+### Magnetic Button
+
+<Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
+  <button className="rounded-full bg-zinc-900 px-6 py-3 text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200">
+    Magnetic Button
+  </button>
+</Magnetic>
+
+### Animated Background
+
+<AnimatedBackground
+  enableHover
+  className="h-32 w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+  transition={{
+    type: 'spring',
+    bounce: 0,
+    duration: 0.2,
+  }}
+>
+  <div className="flex h-full items-center justify-center">
+    <p className="text-center">Hover for animated background effect</p>
+  </div>
+</AnimatedBackground>
+
+### Morphing Dialog
+
+<MorphingDialog
+  transition={{
+    type: 'spring',
+    bounce: 0,
+    duration: 0.3,
+  }}
+>
+  <MorphingDialogTrigger>
+    <button className="rounded-lg bg-zinc-900 px-4 py-2 text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200">
+      Open Dialog
+    </button>
+  </MorphingDialogTrigger>
+  <MorphingDialogContainer>
+    <MorphingDialogContent className="relative rounded-2xl bg-zinc-50 p-6 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
+      <h3 className="mb-2 text-lg font-semibold">Interactive Dialog</h3>
+      <p className="text-zinc-600 dark:text-zinc-400">
+        This dialog uses morphing animations for smooth transitions.
+      </p>
+      <MorphingDialogClose className="absolute top-4 right-4 rounded-full bg-white p-1">
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </MorphingDialogClose>
+    </MorphingDialogContent>
+  </MorphingDialogContainer>
+</MorphingDialog>
+
 ## Example: Exporting Metadata
 
 You can export a `metadata` object at the top of your MDX file like this:
@@ -21,11 +107,12 @@ export const metadata = {
 
 This metadata will be picked up by Next.js and can be used for SEO, Open Graph, and other meta tags.
 
-## Why Use Metadata in MDX?
+## Why Use Interactive Components in MDX?
 
-- **SEO**: Improve your page's search engine ranking with relevant titles and descriptions.
-- **Social Sharing**: Enhance how your content appears when shared on social media platforms.
-- **Consistency**: Keep your metadata close to your content for easier management.
+- **Engagement**: Interactive elements make your content more engaging
+- **Demonstration**: Show live examples of your work and concepts
+- **Learning**: Readers can interact with concepts directly
+- **Portfolio**: Showcase your component library and skills
 
 ## Further Reading
 - [Next.js Documentation: Metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)
@@ -33,4 +120,4 @@ This metadata will be picked up by Next.js and can be used for SEO, Open Graph, 
 
 ---
 
-_This post demonstrates how to export metadata from MDX files for use with Next.js SEO features, inspired by [leerob's site](https://github.com/leerob/site/blob/main/app/n/product-engineers/page.mdx)._ 
+_This post demonstrates how to use interactive components in MDX files, making your craft pages come alive with engaging interactions._ 
