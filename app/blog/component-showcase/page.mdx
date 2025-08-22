@@ -1,0 +1,215 @@
+# Interactive Component Showcase
+
+A comprehensive guide to all the interactive components available in your craft pages. Each component below includes a live demo and detailed explanation.
+
+## Spotlight Component
+
+<Spotlight className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50" size={64}>
+  <div className="relative h-40 w-full rounded-xl bg-zinc-50 p-8 dark:bg-zinc-950">
+    <h3 className="text-lg font-semibold">Hover over this area</h3>
+    <p className="text-zinc-600 dark:text-zinc-400">The spotlight effect follows your cursor and creates a dynamic lighting effect</p>
+  </div>
+</Spotlight>
+
+**How it works:** The Spotlight component tracks your mouse position and creates a gradient spotlight that follows your cursor. It uses CSS gradients and blur effects to create a realistic lighting simulation. Perfect for highlighting interactive elements or creating engaging hover states.
+
+**Props:**
+- `className`: Custom styling for the spotlight gradient
+- `size`: Controls the size of the spotlight effect
+- `children`: The content that gets the spotlight effect
+
+---
+
+## Magnetic Component
+
+<Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
+  <button className="rounded-full bg-zinc-900 px-6 py-3 text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200">
+    Magnetic Button
+  </button>
+</Magnetic>
+
+**How it works:** The Magnetic component creates a subtle attraction effect when you hover near it. It uses spring physics to smoothly move the element toward your cursor, creating an engaging interactive experience. The effect is subtle but adds a premium feel to your interface.
+
+**Props:**
+- `springOptions`: Controls the spring physics behavior
+- `intensity`: How strong the magnetic pull is
+- `children`: The element that gets the magnetic effect
+
+---
+
+## Animated Background Component
+
+<AnimatedBackground
+  enableHover
+  className="h-32 w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+  transition={{
+    type: 'spring',
+    bounce: 0,
+    duration: 0.2,
+  }}
+>
+  <div className="flex h-full items-center justify-center">
+    <p className="text-center">Hover to see the animated background effect</p>
+  </div>
+</AnimatedBackground>
+
+**How it works:** The AnimatedBackground component creates a dynamic background that responds to hover interactions. It uses CSS animations and transforms to create smooth, engaging background effects. Great for cards, buttons, or any element that needs visual feedback.
+
+**Props:**
+- `enableHover`: Toggles the hover animation
+- `className`: Custom styling for the background
+- `transition`: Controls the animation timing and easing
+
+---
+
+## Text Effect Component
+
+<TextEffect 
+  words={[
+    {
+      text: "Animated",
+      className: "text-blue-500 dark:text-blue-400",
+    },
+    {
+      text: "Text",
+      className: "text-purple-500 dark:text-purple-400",
+    },
+    {
+      text: "Effects",
+      className: "text-green-500 dark:text-green-400",
+    },
+  ]}
+  className="text-2xl font-bold"
+/>
+
+**How it works:** The TextEffect component creates animated text that cycles through different words with smooth transitions. Each word can have its own styling, and the component handles the timing and animation automatically. Perfect for headlines, call-to-actions, or any text that needs to be dynamic.
+
+**Props:**
+- `words`: Array of word objects with text and styling
+- `className`: Base styling for the text container
+- Automatic cycling through words with smooth transitions
+
+---
+
+## Text Loop Component
+
+<TextLoop className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+  <span>Design</span>
+  <span>Build</span>
+  <span>Create</span>
+  <span>Innovate</span>
+</TextLoop>
+
+**How it works:** The TextLoop component creates a simple text carousel that cycles through different words or phrases. It's lighter than TextEffect and perfect for simple rotating text. Each child element becomes a slide in the rotation.
+
+**Props:**
+- `className`: Styling for the text container
+- `children`: Multiple text elements that will rotate
+- Automatic cycling with smooth transitions
+
+---
+
+## Text Morph Component
+
+<TextMorph className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+  <span>Design</span>
+  <span>Engineer</span>
+  <span>Creator</span>
+</TextMorph>
+
+**How it works:** The TextMorph component creates a morphing effect between different words, where letters smoothly transform from one word to another. It's more complex than TextLoop and creates a unique morphing animation effect.
+
+**Props:**
+- `className`: Styling for the text container
+- `children`: Text elements that will morph between each other
+- Automatic morphing with letter-by-letter transitions
+
+---
+
+## Morphing Dialog Component
+
+<MorphingDialog
+  transition={{
+    type: 'spring',
+    bounce: 0,
+    duration: 0.3,
+  }}
+>
+  <MorphingDialogTrigger>
+    <button className="rounded-lg bg-zinc-900 px-4 py-2 text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200">
+      Open Morphing Dialog
+    </button>
+  </MorphingDialogTrigger>
+  <MorphingDialogContainer>
+    <MorphingDialogContent className="relative rounded-2xl bg-zinc-50 p-6 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
+      <h3 className="mb-2 text-lg font-semibold">Morphing Dialog</h3>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+        This dialog uses morphing animations for smooth transitions. The trigger button morphs into the dialog content, creating a seamless user experience.
+      </p>
+      <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        Notice how the button smoothly transforms into the dialog - this creates a more natural and engaging interaction pattern.
+      </p>
+      <MorphingDialogClose className="absolute top-4 right-4 rounded-full bg-white p-1 hover:bg-zinc-100 transition-colors">
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </MorphingDialogClose>
+    </MorphingDialogContent>
+  </MorphingDialogContainer>
+</MorphingDialog>
+
+**How it works:** The MorphingDialog component creates a dialog that morphs from its trigger element. When opened, the trigger button smoothly transforms into the dialog content, creating a seamless and engaging user experience. This is much more sophisticated than traditional modal dialogs.
+
+**Components:**
+- `MorphingDialog`: Main container component
+- `MorphingDialogTrigger`: The element that triggers the dialog
+- `MorphingDialogContainer`: Container for the dialog content
+- `MorphingDialogContent`: The actual dialog content
+- `MorphingDialogClose`: Close button for the dialog
+
+**Props:**
+- `transition`: Controls the morphing animation timing and easing
+- Various styling props for customization
+
+---
+
+## How to Use These Components
+
+### Basic Usage
+Simply import the components in your `mdx-components.tsx` file (already done) and use them directly in your MDX files:
+
+```jsx
+<Spotlight className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl" size={64}>
+  <div className="p-8">
+    Your content here
+  </div>
+</Spotlight>
+```
+
+### Combining Components
+You can combine multiple components for more complex interactions:
+
+```jsx
+<Magnetic intensity={0.3}>
+  <Spotlight className="from-blue-500 to-purple-500 blur-2xl" size={48}>
+    <button className="px-6 py-3 bg-zinc-900 text-white rounded-lg">
+      Interactive Button
+    </button>
+  </Spotlight>
+</Magnetic>
+```
+
+### Customization
+All components accept standard React props and can be styled with Tailwind classes or custom CSS. The components are designed to work seamlessly with your existing design system.
+
+---
+
+## Best Practices
+
+1. **Performance**: These components are optimized for performance, but use them thoughtfully
+2. **Accessibility**: Components include proper ARIA attributes and keyboard navigation
+3. **Mobile**: All components work well on touch devices
+4. **Theming**: Components automatically adapt to light/dark mode
+5. **Customization**: Use the className prop to match your design system
+
+These components transform your craft pages from static content into engaging, interactive experiences that showcase your technical skills and creativity!
