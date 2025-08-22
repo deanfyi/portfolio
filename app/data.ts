@@ -15,7 +15,7 @@ type WorkExperience = {
   id: string
 }
 
-type BlogPost = {
+type CraftPost = {
   title: string
   description: string
   link: string
@@ -74,7 +74,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
 ]
 
-export const BLOG_POSTS: BlogPost[] = [
+export const CRAFT_POSTS: CraftPost[] = [
   {
     title: 'Exploring the Intersection of Design, AI, and Design Engineering',
     description: 'How AI is changing the way we design',

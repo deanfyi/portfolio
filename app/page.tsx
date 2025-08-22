@@ -15,7 +15,7 @@ import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
   PROJECTS,
   WORK_EXPERIENCE,
-  BLOG_POSTS,
+  CRAFT_POSTS,
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
@@ -213,7 +213,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">Writing</h3>
+        <h3 className="mb-3 text-lg font-medium">Craft</h3>
         <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
@@ -224,7 +224,7 @@ export default function Personal() {
               duration: 0.2,
             }}
           >
-            {BLOG_POSTS.map((post) => (
+            {CRAFT_POSTS.map((post) => (
               <Link
                 key={post.uid}
                 className="-mx-3 rounded-xl px-3 py-3"
